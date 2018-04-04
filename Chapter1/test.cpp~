@@ -2,7 +2,9 @@
 
 int main(){
 
-  std::cout<<(int)'y'<<std::endl;
+  string var = "%20";
+
+  std::cout<<var<<std::endl;
 
 
 }

@@ -1,8 +1,10 @@
 #include <iostream>
-
+#include <string>
 int main(){
 
-  std::cout<<(int)'u'<<std::endl;
+  std::string var = "%20";
+
+  std::cout<<var<<std::endl;
 
 
 }
