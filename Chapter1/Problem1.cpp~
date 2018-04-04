@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-bool values[256];
+bool values[128];
 
 bool isUnique(std::string word){
   if(word.length() > 128)
