@@ -1,0 +1,37 @@
+#include<iostream>
+#include <string>
+using namespace std;
+
+
+string compress(string word){
+  char currentLetter = word[0];
+  int count = 0;
+  string compressedWord;
+
+  for(int i = 0; i <word.length();i++){
+    if(word[i] == currentLetter)
+      count++;
+    else{
+      compressedWord.push_back(currentLetter);
+      compressedWord+=to_string(count);
+      count = 1;
+      currentLetter = word[i];
+    }
+    cout<<"It: "<<i<<endl;
+  }
+
+  compressedWord.push_back(currentLetter);
+  compressedWord+=to_string(count);
+  if(compressedWord.length() < word.length())
+    return compressedWord;
+  else
+    return word;
+
+}
+
+int main(){
+
+  cout<<compress("aabcccccaaa")<<endl; 
+
+
+}
